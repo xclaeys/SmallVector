@@ -15,14 +15,28 @@ private:
 public:
 
   SmallVector(): x(N,T()){}  
+
   SmallVector(const SmallVector<N,T>&) = default;  
+
   SmallVector(SmallVector<N,T>&&) = default;
+
   SmallVector<N,T>& operator=(const SmallVector<N,T>&) = default;
+
   SmallVector<N,T>& operator=(SmallVector<N,T>&&) = default;
+
   T& operator[](std::size_t j){return x[j];}
+
   const T& operator[](std::size_t j) const {return x[j];}  
+
   friend std::ostream& operator<<(std::ostream& o, const SmallVector<N,T>& v){
     for(int j=0; j<N; ++j){o<<v[j]<<"\t";} return o;}
+
+  SmallVector<N,T>& operator+=(const SmallVector<N,T>& v){
+    for(int j=0; j<x.size(); ++j){x[j]+=v[j];} return *this;}
+  
+  SmallVector<N,T> operator+(SmallVector<N,T> v){
+    return v+=*this;}
+
 };
 
 typedef SmallVector<1,double> R1;

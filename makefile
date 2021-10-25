@@ -7,3 +7,6 @@ test.o:
 
 check:
 	./test
+
+clean:
+	rm *.o
