@@ -6,9 +6,8 @@ using namespace std;
 
 int main(){
   
-  cout << "Hello world" << endl;  
   R3 x;
   cout << x << endl;
 
-  return 1;
+  return 0;
 }
