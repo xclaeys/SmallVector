@@ -37,6 +37,10 @@ public:
   SmallVector<N,T> operator+(SmallVector<N,T> v){
     return v+=*this;}
 
+  SmallVector<N,T>& operator-=(const SmallVector<N,T>& v){
+    for(int j=0; j<x.size(); ++j){x[j]-=v[j];} return *this;}  
+  
+  
 };
 
 typedef SmallVector<1,double> R1;
