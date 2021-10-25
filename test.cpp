@@ -10,5 +10,5 @@ int main(){
   R3 x;
   cout << x << endl;
 
-  return 0;
+  return 1;
 }
