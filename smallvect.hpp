@@ -32,7 +32,7 @@ public:
     for(int j=0; j<N; ++j){o<<v[j]<<"\t";} return o;}
 
   SmallVector<N,T>& operator+=(const SmallVector<N,T>& v){
-    for(int j=0; j<x.size(); ++j){x[j]+=v[j]} return *this;}
+    for(int j=0; j<x.size(); ++j){x[j]+=v[j];} return *this;}
   
   SmallVector<N,T> operator+(SmallVector<N,T> v){
     return v+=*this;}
